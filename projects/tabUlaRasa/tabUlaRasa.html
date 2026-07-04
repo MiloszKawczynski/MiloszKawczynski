@@ -24,7 +24,7 @@
           <h1 class="project-title">Tab Ula Rasa</h1>
 
           <blockquote class="project-quote">
-            Bzzz bz bzz... bzz? Oh, we meant, do you like... games? Tab Ula Rasa (ang. Tab Beehives Race) is a chaotic top-down strategy game in which you manage your own bee-garden.
+            Bzzz bz bzz... bzz? Oh, we meant, do you like... games? Help the bees, prevent conflicts, collect pollen in this full of buzzing game.
           </blockquote>
 
           <div class="project-hero-media bounce-target">
@@ -32,7 +32,7 @@
               <video autoplay muted loop playsinline>
                 <source src="tabUlaRasa.mp4" type="video/mp4" />
               </video>
-              <span class="project-hero-media__caption">lorem ipsum.</span>
+              <span class="project-hero-media__caption">Gameplay video.</span>
             </div>
           </div>
 
@@ -40,12 +40,12 @@
 
           <section class="project-section" id="about">
             <h2 class="project-section__title">About the game</h2>
-            <p>Lorem Ipsum</p>
-            <p>Dolor Sit Amet</p>
+            <p>Tab Ula Rasa (ang. Tab Beehives Race) is a chaotic top-down strategy game in which you manage your own bee-garden. Three wonderful, yet feisty bee types are working hard to make honey, yet are not so friendly towards each other. Manage their paths, aviod conflicts and control your world with a simple click of a Tab.</p>
+            <p>The game was created as part of the 2k24 Komiks Game Jam. Its solid quality, great attention to detail, and the depth of its seemingly simple mechanics won the hearts of players and jurors.</p>
           </section>
 
           <section class="project-section" id="gallery">
-            <h2 class="project-section__title">Screenshots</h2>
+            <h2 class="project-section__title">Gallery</h2>
             <div class="project-gallery project-gallery--4">
               <div class="project-gallery__item bounce-target">
                 <div class="shake-target">
@@ -82,18 +82,106 @@
             <h2 class="project-section__title">My Contributions</h2>
 
             <div class="contrib contrib--programming">
+              <p>As one of two programmers, I programmed most of the systems, the core gameplay, and many of the visual elements:</p>
               <h3 class="contrib__title">Systems Programming</h3>
-              <p>Robiłem system generatywny statków i AI</p>
+              <div class="feature-columns">
+                <ul class="feature-list">
+                  <li>Cutscene system</li>
+                  <li>Tutorial system</li>
+                </ul>
+
+                <ul class="feature-list">
+                  <li>Help with progression system</li>
+                  <li>Screen wrapping system</li>
+                </ul>
+              </div>
             </div>
 
             <div class="contrib contrib--programming">
               <h3 class="contrib__title">Gameplay Programming</h3>
-              <p>Robiłem gameplay</p>
+              <div class="feature-columns">
+                <ul class="feature-list">
+                  <li>Movement</li>
+                  <li>Placing beehives</li>
+                  <li>Pushing bees</li>
+                </ul>
+
+                <ul class="feature-list">
+                  <li>Bee behavior (normal and angry)</li>
+                  <li>Particle and other visual effects</li>
+                  <li>Bug fixes</li>
+                </ul>
+              </div>
             </div>
 
             <div class="contrib contrib--design">
               <h3 class="contrib__title">Game Design</h3>
-              <p>Robiłem design</p>
+              <h4>Idea</h4>
+              <p>The theme of the game jam was the Latin phrase <em>Tabula Rasa</em>, meaning a blank slate. At game jams, I always try to find a unique approach to the topic, an approach to an idea that won't be found in any other game. For this reason, I break the topic down, looking for different meanings, definitions, and phraseological units. In this case, breaking the topic down was a bit more literal. <em>Tabula Rasa</em> in our game became <em>TAB Ula Rasa</em>. That is, a game in which we use the <em>TAB</em> button on the keyboard (which typically creates a space in text editors) to push, or rather, introduce a space between, bees of different races. <em>Ul</em> in Polish means beehive, and <em>rasa</em> in Polish means race.</p>
+              <h4>Tutorial</h4>
+              <p>Due to the sheer insanity of the game's concept, it was essential to provide the player with excellent tutorials, especially since judging at a game jam is time-constraint and chaotic.</p>
+              <p>That's why our tutorials appear even before the actual game. In the main menu, we instruct the player that they will control the game using an unusual key: Tab. We also show three types of hives, which provides additional context for the cutscene.</p>
+              <p>During the jam, <a href="https://adjp.pl" target="_blank" rel="noopener">Julia Pietrzykowska</a> and <a href="https://dramaticat.artstation.com" target="_blank" rel="noopener">Karolina Sołtysiak</a> proposed preparing assets and directing a cutscene. The cutscene plays right after the menu and not only sets the mood but also serves an important informational function. We see three different bees visually corresponding to the hives in the main menu. These bees fly to a flower, and when they are next to each other, they start to get nervous. Finally, the TAB button arrives and by, pressing on itself, calms them down. This introduces the player to the bees' purpose and behavior, as well as the task the player need to perform.</p>
+
+              <div class="project-gallery project-gallery--2">
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <img src="mainMenu.png" alt="Main menu"/>
+                    <span class="project-hero-media__caption">Main menu.</span>
+                  </div>
+                </div>
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <video autoplay muted loop playsinline>
+                      <source src="cutscene.mp4" type="video/mp4" />
+                    </video>
+                    <span class="project-hero-media__caption">In game cutscene.</span>
+                  </div>
+                </div>
+              </div>
+
+              <p>The next step in the tutorial is the in-game tutorial segment. It's structured so that the player is presented with a short explanation of the mechanics and additional prompts for required keystrokes.</p>
+
+              <div class="project-gallery project-gallery--1">
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <video autoplay muted loop playsinline>
+                      <source src="tutorial.mp4" type="video/mp4" />
+                    </video>
+                    <span class="project-hero-media__caption">In game tutorial.</span>
+                  </div>
+                </div>
+              </div>
+
+              <p>At the very beginning, there is no sentence, and the player only sees the main character, whom they will control, wich is, the TAB key. Due to lack of other options, the player simply presses it, which reveals the hive behind the TAB key and displays the first sentence. <i>- Set Beehives -</i> After pressing TAB again, the hive will shoot out and the next sentence will be displayed. <i>- Honey gives you points -</i> The player sees a scene in which a bee flies from a hive to a flower, collects pollen, returns to the hive, and this awards the player a point. This shows the player what to do to earn points and ultimately win. When the bee returns to the hive, another hive will appear in front of the TAB key, additional prompts for the left and right arrow keys, and another sentence. <i>- Different hives house different races -</i>This segment teaches the player an important control element: rotating the Tab key. Thanks to this, the player already has the correct hand position on the keyboard and will be able to place the hive in a completely different location. Additionally, the sentence suggests another key gameplay element; the player knows that a different type of bee will fly out of the new hive.<i>- Mixing races will cause chaos -</i>Regardless of where the player places the second hive, the bees will fly to the same flower, eventually becoming angry and showing the player that angry bees don't carry pollen to the hive and therefore won't score them a point.<i>- Calm them with tab -</i>Now, when the player presses TAB again, their movement will be fully unlocked and they will move forward constantly, just like in the rest of the game. The sentence informs the player how to calm the bees, so after the player gets used to the navigation, they will fly to them and press TAB to calm them down.<i>- Place remaining hives -</i>Technically speaking, this is no longer part of the tutorial, but a part of the gameplay. The player now has complete freedom of movement, placing the remaining hives. After this task, the sentence will disappear and the bees will fly out of the hives.</p>
+              <p>If the player presses any arrow key at any point before the sentence <em>- Different hives house different races -</em>, the entire tutorial will be skipped and the player will automatically be taken to the hive placement section. The game will also notice this and display the sentence <i>- I see you are professional -</i></p>
+
+              <div class="project-gallery project-gallery--1">
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <img src="proffesional.png" alt="Proffesional"/>
+                    <span class="project-hero-media__caption">Skip tutorial sentence.</span>
+                  </div>
+                </div>
+              </div>
+
+              <p>Of course, the tutorial wasn't created this way from the start. Specific sections, displayed sentences, and presented situations were changed throughout the production. With each major change, I asked other jam participants or organizers to test the game. Each time, I asked someone who hadn't played the game before to play, so that we would always have fresh perspectives in our feedback. This allowed me to observe player behavior and identify any non-intuitive elements of the tutorial.</p>
+              <p>This method of player tutorialization worked so well that in the future I used similar techniques in other games: <a href="../guidingLight/guidingLight.html" target="_blank" rel="noopener">Guiding Light</a>, <a href="../docinoMitty/docinoMitty.html" target="_blank" rel="noopener">Docino Mitty</a>, <a href="../dolorSitAmet/dolorSitAmet.html" target="_blank" rel="noopener">Dolor Sit Amet</a> and <a href="../foilage/foilage.html" target="_blank" rel="noopener">Foilaĝe</a>.</p>
+
+              <h4>Depth of simple mechanics</h4>
+              <p>Despite the relatively simple mechanics of placing and calming bees, it contains a lot of depth. Although placing hives may seem highly random, it has a strategic element. The player knows which hive to place next and the flower arrangement, which is different at the start of each game. This allows them to plan groups of hives and their potential paths to the flowers.</p>
+              <p>Soothing the bees also has the side effect of moving them. The player will quickly realize that they can use this to speed up the bees' path to their destination. This, combined with wrapping objects across the screen, allows for moves in which the player, to avoid meeting two hostile bees, pushes one of them to one side of the screen, thus shortening its path to the destination.</p>
+
+              <div class="project-gallery project-gallery--1">
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <video autoplay muted loop playsinline>
+                      <source src="technic.mp4" type="video/mp4" />
+                    </video>
+                    <span class="project-hero-media__caption">Shortening the distance for the bee.</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <p class="contributions-also contributions-also--design">
@@ -121,7 +209,7 @@
                   <td>Design & Programming</td>
                 </tr>
                 <tr>
-                  <td><a href="" target="_blank" rel="noopener">Grzegorz Ludziejewski</a></td>
+                  <td><a href="https://cheily.one" target="_blank" rel="noopener">Grzegorz Ludziejewski</a></td>
                   <td>Programming</td>
                 </tr>
                 <tr>
@@ -129,7 +217,7 @@
                   <td>2D Art</td>
                 </tr>
                 <tr>
-                  <td><a href="dramaticat.artstation.com" target="_blank" rel="noopener">Karolina Sołtysiak</a></td>
+                  <td><a href="https://dramaticat.artstation.com" target="_blank" rel="noopener">Karolina Sołtysiak</a></td>
                   <td>2D Art</td>
                 </tr>
                 <tr>
@@ -206,7 +294,7 @@
                 </div>
                 <div class="info-item">
                   <dt>Theme</dt>
-                  <dd>Tabularasa</dd>
+                  <dd>Tabula Rasa</dd>
                 </div>
                 <div class="info-item">
                   <dt>Entries in jam</dt>
