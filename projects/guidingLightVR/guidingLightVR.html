@@ -45,12 +45,19 @@
           </section>
 
           <section class="project-section" id="gallery">
-            <h2 class="project-section__title">Screenshots</h2>
-            <div class="project-gallery project-gallery--1">
+            <h2 class="project-section__title">Gallery</h2>
+            <div class="project-gallery project-gallery--2">
               <div class="project-gallery__item bounce-target">
                 <div class="shake-target">
                   <a href="guidingLightVR1.png" target="_blank">
                     <img src="guidingLightVR1.png" alt="Screenshot 1" />
+                  </a>
+                </div>
+              </div>
+              <div class="project-gallery__item bounce-target">
+                <div class="shake-target">
+                  <a href="guidingLightVR2.png" target="_blank">
+                    <img src="guidingLightVR2.png" alt="Screenshot 2" />
                   </a>
                 </div>
               </div>
@@ -61,7 +68,50 @@
             <h2 class="project-section__title">My Contributions</h2>
             <div class="contrib">
               <h3 class="contrib__title">Game Design</h3>
-              <p>Robiłem design</p>
+              <p>As a designer, I was responsible for proposing the porting of the <a href="../guidingLight/guidingLight.html" target="_blank" rel="noopener">Guiding Light</a> game project to VR, preparing VR gameplay rules, supporting programmers in transferring the gameplay logic of the original project, and solving design problems during production.</p>
+              <h4>PC to VR</h4>
+              <p>As a VR gamer, I knew the advantages of this hardware and what I wanted to achieve by porting <a href="../guidingLight/guidingLight.html" target="_blank" rel="noopener">Guiding Light</a> to VR. Most of the fun in VR games comes from the player's interesting physical interactions with the environment. Therefore, physically controlling the lighhous's spotlight was the foundation upon which the rest of the project was built.</p>
+              <p>My goal wasn't to replicate the original game 1:1, so all the mechanics related to exiting the lighthouse—about half of the original game—have disappeared from the VR version. These elements have been either simplified or replaced with additional mechanics inside the lighthouse. For example, there's no longer a distinction between cargo ships and food ships; there are still two types of ships (three if you count pirates), but both grant the player points, just like food ships, but they must be led to different bays.</p>
+              <p>The improvements from the original, namely upgrading lighthouse and flash, which required exiting the lighthouse, have been forged into two complex interactions. The lantern contains a light bulb and a thickly braided cord. Pulling it activates the flash, stopping all ships and shattering the bulb. After a while, a helpful penguin will bring us another bulb, but the player must physically take it and screw it into the lampshade. Upgrading lighthouse has been replaced by a generator, in which if the energy runs out, the lighthouse light goes out completely. To maintain the energy level, the generator must be wound with a crank. This concept is reiteration of similiar idea from one of the prototypes of the original, but there it created a negative interaction where lack of energy severly punish the player, here it fit perfectly. Although both of these actions are now located in the lighthouse, they serve the same purpose as in the original concept. In order to use these items, the player had to exit the lighthouse, losing control of the light. In the VR version, players also lose control of the light when engaged in other activities because they cannot hold the spotlight, at least not with both hands, and controlling the heavy spotlight with one hand is more difficult.</p>
+
+              <div class="project-gallery project-gallery--2">
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <video autoplay muted loop playsinline>
+                      <source src="flash.mp4" type="video/mp4" />
+                    </video>
+                    <span class="project-hero-media__caption">Flash and generator in final game.</span>
+                  </div>
+                </div>
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <video autoplay muted loop playsinline>
+                      <source src="generator.mp4" type="video/mp4" />
+                    </video>
+                    <span class="project-hero-media__caption">Generator in production.</span>
+                  </div>
+                </div>
+              </div>
+
+              <p>Light control has also undergone some changes. Because we control the spotlight with our hands rather than with the mouse, ship control isn't as precise. Therefore, some ships often accidentally get caught in the beam of light when the player tries to quickly point the spotlight in a completely different direction. To avoid player frustration, we've added an additional feature not present in the original: the ability to temporarily turn off the light while moving the spotlight.</p>
+
+              <h4>Level Design</h4>
+              <p>Although I wasn't a level designer in this project, together with <a href="https://www.linkedin.com/in/m-galinski/" target="_blank" rel="noopener">Michał Galiński</a> we created a concept for modifying the level structure. Whereas in the original <a href="../guidingLight/guidingLight.html" target="_blank" rel="noopener">Guiding Light</a> the levels stretched across and the lighthouse was located halfway along its path, in Guiding Light VR the lighthouse stands at the head of the river, giving it a complete view of it.</p>
+              
+              <div class="project-gallery project-gallery--2">
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <img src="GLLevel.png" alt="Guiding Light Level Structure." />
+                    <span class="project-hero-media__caption">Guiding Light Level Structure.</span>
+                  </div>
+                </div>
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <img src="GLVRLevel.png" alt="Guiding Light VR Level Structure." />
+                    <span class="project-hero-media__caption">Guiding Light VR Level Structure.</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
           
@@ -78,7 +128,7 @@
                   <td>Programming & Production & Voice Acting</td>
                 </tr>
                 <tr>
-                  <td><a href="" target="_blank" rel="noopener">Jędrzej Huzarski</a></td>
+                  <td><a href="https://www.linkedin.com/in/jędrzej-huzarski-912a39304/" target="_blank" rel="noopener">Jędrzej Huzarski</a></td>
                   <td>3D</td>
                 </tr>
                 <tr>
@@ -86,7 +136,7 @@
                   <td>Design & Programming</td>
                 </tr>
                 <tr>
-                  <td><a href="dramaticat.artstation.com" target="_blank" rel="noopener">Karolina Sołtysiak</a></td>
+                  <td><a href="https://dramaticat.artstation.com" target="_blank" rel="noopener">Karolina Sołtysiak</a></td>
                   <td>2D & 3D</td>
                 </tr>
                 <tr>
