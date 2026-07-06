@@ -1,10 +1,11 @@
-const ART_TAGS  = ['game-design', 'level-design', 'pixelart'];
+const ART_TAGS  = ['game-design', 'level-design', 'sound-design', 'pixelart'];
 const TECH_TAGS = ['gameplay-programming', 'engine-programming', 'systems-programming'];
 
 const TAG_LABELS = {
   'game-design':           'Game Design',
   'level-design':          'Level Design',
   'pixelart':              'Pixel Art',
+  'sound-design':          'Sound Design',
   'gameplay-programming':  'Gameplay Prog.',
   'engine-programming':    'Engine Prog.',
   'systems-programming':   'Systems Prog.',
