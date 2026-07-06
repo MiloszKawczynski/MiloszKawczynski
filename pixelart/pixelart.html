@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixel Art — Galeria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Nunito:ital,wght@0,700;1,400&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="pixelart.css" />
+</head>
+
+<body>
+  <script src="../header.js"></script>
+
+  <main class="pixel-main">
+    <div class="container">
+
+      <div class="pixel-header">
+        <h1 class="pixel-header__title">Pixel Art</h1>
+        <p class="pixel-header__desc">
+          Besides creating games, I also do pixel art as a hobby. Thanks to this, I can create game graphics when I'm not working with an artist, but I also create standalone works, some of which are featured on this website.
+        </p>
+      </div>
+
+      <div class="pixel-gallery" id="pixelGallery">
+      </div>
+
+    </div>
+  </main>
+
+  <div class="pixel-lightbox" id="pixelLightbox">
+    <button class="pixel-lightbox__close" id="pixelLightboxClose" aria-label="Zamknij">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <button class="pixel-lightbox__nav pixel-lightbox__nav--prev" id="pixelLightboxPrev" aria-label="Poprzedni">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="pixel-lightbox__nav pixel-lightbox__nav--next" id="pixelLightboxNext" aria-label="Następny">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="pixel-lightbox__body">
+      <div class="pixel-lightbox__image-wrap">
+        <img class="pixel-lightbox__image bounce-target" id="pixelLightboxImage" src="" alt="" />
+      </div>
+
+      <aside class="pixel-lightbox__panel">
+        <h2 class="pixel-lightbox__title" id="pixelLightboxTitle"></h2>
+        <span class="pixel-lightbox__date" id="pixelLightboxDate"></span>
+        <p class="pixel-lightbox__description" id="pixelLightboxDescription"></p>
+      </aside>
+    </div>
+  </div>
+
+  <script src="../footer.js"></script>
+  <script src="../character.js"></script>
+  <script src="pixelart.js"></script>
+
+</body>
+</html>

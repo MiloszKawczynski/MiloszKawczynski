@@ -16,10 +16,10 @@
           <span class="mode-toggle__label">Programming 💻</span>
         </div>
         <nav class="tabs" role="tablist">
-          <a href="${BASE}/index.html"      class="tab" role="tab">Projects</a>
-          <a href="${BASE}/pixelArt.html"   class="tab" role="tab">Pixel Art</a>
-          <a href="${BASE}/about.html"      class="tab" role="tab">About</a>
-          <a href="${BASE}/resume.html"     class="tab" role="tab">Resume</a>
+          <a href="${BASE}/index.html"                class="tab" role="tab">Projects</a>
+          <a href="${BASE}/pixelart/pixelart.html"    class="tab" role="tab">Pixel Art</a>
+          <a href="${BASE}/about.html"                class="tab" role="tab">About</a>
+          <a href="${BASE}/resume.html"               class="tab" role="tab">Resume</a>
         </nav>
       </div>
     </div>
