@@ -6,7 +6,7 @@
   <title>About — Miłosz Kawczyński</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Nunito:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="about.css" />
 </head>
@@ -16,34 +16,97 @@
 
   <main class="about-main">
     <div class="container">
-      <div class="about-layout">
 
-        <!-- LEWA — zdjęcie -->
-        <div class="about-photo-col">
-          <div class="about-photo bounce-target">
-            <img src="me.png" alt="Miłosz Kawczyński" />
+      <div class="about-variant about-variant--design">
+        <div class="about-layout">
+          <div class="about-photo-col">
+            <div class="about-photo bounce-target">
+              <img src="me.png" alt="Miłosz Kawczyński" />
+            </div>
+          </div>
+
+          <div class="about-text-col">
+
+            <p class="about-eyebrow">
+              <span>.--.</span>
+              <span>.-..</span>
+              <span>.</span>
+              <span>.-</span>
+              <span>...</span>
+              <span>.</span>
+              <span>....</span>
+              <span>..</span>
+              <span>.-.</span>
+              <span>.</span>
+              <span>--.</span>
+              <span>.</span>
+            </p>
+            <h1 class="about-name">Miłosz Kawczyński</h1>
+            <p class="about-role">Game Designer · Level Designer · Pixel Artist</p>
+
+            <div class="about-bio">
+              <p>I'm a creative, adaptable game developer with hands-on experience in design, sound design, and pixel art. Having worked with various engines — Unreal Engine (C++ and Blueprints), GameMaker, and a custom engine — and across every discipline of game creation, I can speak the language of specialists in each field and communicate effectively across interdisciplinary teams. For years, I chaired Digital Night Studio, a game creators' club, giving design lectures, organizing events, and supporting numerous teams through design and production.</p>
+              <p>If you want to see my skills related to 
+                <a href="https://miloszkawczynski.github.io/miloszkawczynskidesign.github.io/projects/connectro/connectro.html" target="_blank">ideation and reaserch</a>, 
+                <a href="https://miloszkawczynski.github.io/miloszkawczynskidesign.github.io/projects/guidingLight/guidingLight.html" target="_blank">prototyping</a>, 
+                <a href="https://miloszkawczynski.github.io/miloszkawczynskidesign.github.io/projects/honoratka/honoratka.html" target="_blank">GDD</a>, 
+                <a href="https://miloszkawczynski.github.io/miloszkawczynskidesign.github.io/projects/tabUlaRasa/tabUlaRasa.html" target="_blank">tutorialization</a>, 
+                <a href="https://miloszkawczynski.github.io/miloszkawczynskidesign.github.io/projects/gravityTag/gravityTag.html" target="_blank">level design</a>, 
+                <a href="https://miloszkawczynski.github.io/miloszkawczynskidesign.github.io/projects/docinoMitty/docinoMitty.html" target="_blank">sound design</a>, or 
+                <a href="https://miloszkawczynski.github.io/miloszkawczynskidesign.github.io/projects/connectro/connectro.html" target="_blank">pixel art</a>, click the appropriate link to be redirected to the project.</p>
+            </div>
+            <p class="about-switch">
+              Want to see my programming portfolio instead?
+              <span class="contributions-also__switch" onclick="document.getElementById('modeToggle').click()">
+                Switch to Programming
+              </span>
+            </p>
           </div>
         </div>
-
-        <!-- PRAWA — tekst -->
-        <div class="about-text-col">
-
-          <p class="about-eyebrow">Cześć, jestem</p>
-          <h1 class="about-name">Miłosz Kawczyński</h1>
-          <p class="about-role">Game Designer · Gameplay Programmer · Pixel Artist</p>
-
-          <div class="about-bio">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="about-variant about-variant--programming">
+        <div class="about-layout">
+          <div class="about-photo-col">
+            <div class="about-photo bounce-target">
+              <img src="me.png" alt="Miłosz Kawczyński" />
+            </div>
           </div>
 
-          <div class="about-links">
-            <a href="mailto:twoj@email.com" class="btn btn--primary">Napisz do mnie</a>
-            <a href="index.html#projekty" class="btn btn--ghost">Zobacz projekty</a>
-          </div>
+          <div class="about-text-col">
 
+            <p class="about-eyebrow">
+              <span>.--.</span>
+              <span>.-..</span>
+              <span>.</span>
+              <span>.-</span>
+              <span>...</span>
+              <span>.</span>
+              <span>....</span>
+              <span>..</span>
+              <span>.-.</span>
+              <span>.</span>
+              <span>--.</span>
+              <span>.</span>
+            </p>
+            <h1 class="about-name">Miłosz Kawczyński</h1>
+            <p class="about-role">Gameplay Programmer · System Programmer · Engine Programmer</p>
+
+            <div class="about-bio">
+              <p>I'm an experienced game developer with hands-on experience in Unreal Engine (C++ and Blueprints), GameMaker, and a custom engine built with C++23 and DirectX 11. I'm passionate about writing interesting, complex systems — AI, design tools, map generators, and similar systems. As a head and member of Digital Night Studio, a game creators' club, I built numerous diverse projects across different technologies, including PC, mobile and custom engine, and took part in many game jams.</p>
+              <p>If you want to see my skills related to 
+                <a href="https://miloszkawczynski.github.io/miloszkawczynskidesign.github.io/projects/guidingLight/guidingLight.html" target="_blank">Engine programming</a>, 
+                <a href="https://miloszkawczynski.github.io/miloszkawczynskidesign.github.io/projects/gravityTag/gravityTag.html" target="_blank">Systems programming</a>, 
+                <a href="https://miloszkawczynski.github.io/miloszkawczynskidesign.github.io/projects/docinoMitty/docinoMitty.html" target="_blank">Gameplay programming</a> or 
+                <a href="https://miloszkawczynski.github.io/miloszkawczynskidesign.github.io/projects/connectro/connectro.html" target="_blank">Tools programming</a>, click the appropriate link to be redirected to the project.</p>
+            </div>
+            <p class="about-switch">
+              Want to see my game design portfolio instead?
+              <span class="contributions-also__switch" onclick="document.getElementById('modeToggle').click()">
+                Switch to Design
+              </span>
+            </p>
+          </div>
         </div>
-
       </div>
     </div>
   </main>

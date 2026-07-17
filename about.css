@@ -5,6 +5,22 @@
   align-items: center;
 }
 
+.about-variant {
+  width: 100%;
+}
+
+.about-variant--programming {
+  display: none;
+}
+
+body.mode--programming .about-variant--design {
+  display: none;
+}
+
+body.mode--programming .about-variant--programming {
+  display: block;
+}
+
 .about-layout {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -96,4 +112,62 @@ body.mode--programming .about-bio p { color: #c0c0d8; }
   .about-name { text-align: center; }
   .about-eyebrow, .about-role { text-align: center; }
   .about-links { justify-content: center; }
+}
+
+.about-eyebrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  white-space: nowrap;
+  color: var(--c-accent);
+  margin-bottom: 0.75rem;
+}
+
+.about-bio p > a {
+    font-weight: 600;
+    color: var(--c-mid);
+    border-bottom: none;
+    transition: color .2s ease;
+}
+
+.about-bio p > a:hover {
+    color: var(--c-dark);
+}
+
+body.mode--programming .about-bio p > a {
+    color: var(--c-mid);
+}
+
+body.mode--programming .about-bio p > a:hover {
+    color: var(--c-light);
+}
+
+.about-switch {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--c-light);
+  font-size: .8rem;
+  color: var(--c-text-muted);
+  line-height: 1.7;
+  transition: border-color .4s ease, color .4s ease;
+}
+
+.about-switch .contributions-also__switch {
+  color: var(--c-accent);
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s;
+}
+
+.about-switch .contributions-also__switch:hover {
+  border-bottom-color: var(--c-accent);
+}
+
+body.mode--programming .about-switch {
+  border-top-color: #2a2a4a;
+  color: #8888aa;
 }
