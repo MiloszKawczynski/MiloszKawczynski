@@ -42,6 +42,18 @@ body.mode--programming .cv-page {
   border-color: #2a2a4a;
 }
 
+.cv-variant--programming {
+  display: none;
+}
+
+body.mode--programming .cv-variant--design {
+  display: none;
+}
+
+body.mode--programming .cv-variant--programming {
+  display: block;
+}
+
 .cv-header {
   display: grid;
   grid-template-columns: 132px 1fr;
@@ -327,7 +339,8 @@ body.mode--programming .cv-entry li { color: #c0c0d8; }
 body.mode--programming .cv-badge:hover { background: #20203a; }
 
 .cv-badge--static { cursor: default; }
-.cv-badge--static:hover { background: transparent; }
+.cv-badge--static:hover,
+body.mode--programming .cv-badge--static:hover { background: transparent; }
 
 .cv-badge__icon { font-size: 1.2rem; line-height: 1.3; flex-shrink: 0; }
 
@@ -368,6 +381,10 @@ body.mode--programming .cv-badge__name { color: var(--c-light); }
   .cv-section, .cv-entry, .cv-badge, .cv-footer { break-inside: avoid; }
 
   a { color: inherit !important; text-decoration: none !important; border-bottom: none !important; }
+
+  .cv-variant--programming { display: none; }
+  body.mode--programming .cv-variant--design { display: none; }
+  body.mode--programming .cv-variant--programming { display: block; }
 
   body.mode--programming .cv-page,
   body.mode--programming .cv-header,
