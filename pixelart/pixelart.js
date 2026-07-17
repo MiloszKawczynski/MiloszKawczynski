@@ -60,7 +60,7 @@ const artworks = [
     alt: "The Little Ones - Vs Dog",
     title: "The Little Ones - Vs Dog",
     date: "2025",
-    description: "The work was created as a challenge to create pixel art with a convergence perspective.\n\n240 x 160\n6 frames\n10 fps",
+    description: "The work was created as a challenge to create pixel art with a convergence perspective.\n\n240 x 160\n28 frames\n10 fps",
     size: 4
   },
   {
