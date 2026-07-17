@@ -32,7 +32,7 @@
               <video autoplay muted loop playsinline>
                 <source src="shortnessOfBreath.mp4" type="video/mp4" />
               </video>
-              <span class="project-hero-media__caption">lorem ipsum.</span>
+              <span class="project-hero-media__caption">Gameplay video.</span>
             </div>
           </div>
 
@@ -40,12 +40,12 @@
 
           <section class="project-section" id="about">
             <h2 class="project-section__title">About the game</h2>
-            <p>Lorem Ipsum</p>
-            <p>Dolor Sit Amet</p>
+            <p>Shortness of Breath is a puzzle game in which we navigate a hospital as a child suffering from lung cancer. Our hero must constantly use an oxygen mask, which severely restricts his movement but also helps him overcome obstacles in the hospital. On each map the hero must reach the heart representing his recovery.</p>
+            <p>The oxygen mask's tubing wraps around the corners and is limited in length, but our child can pull it, allowing him to move objects. A child is not a superhero and there are many things he can do to hurt himself, for example by pushing a block onto himself. Each map introduces a new mechanic that provides additional uses for the oxygen pipe.</p>
           </section>
 
           <section class="project-section" id="gallery">
-            <h2 class="project-section__title">Screenshots</h2>
+            <h2 class="project-section__title">Gallery</h2>
             <div class="project-gallery project-gallery--4">
               <div class="project-gallery__item bounce-target">
                 <div class="shake-target">
@@ -78,27 +78,149 @@
             </div>
           </section>
 
+          <section class="project-section">
+            <h2 class="project-section__title">Gameplay</h2>
+            <p>Playing as a child confined to an oxygen mask, the player must navigate a hospital while managing a tube of limited length. The tube can be pulled taut to drag and push objects out of the way, wraps around corners to reach new paths, and can even be looped around other oxygen tanks to reconnect and gain a completely different range of movement — turning a symbol of the character's illness into his main tool for pushing forward.</p>
+
+            <div class="feature-columns">
+              <ul class="feature-list">
+                <li>Movement limited by tube length</li>
+                <li>Pulling the tube to move objects</li>
+                <li>Tube wraps around corners and walls</li>
+              </ul>
+
+              <ul class="feature-list">
+                <li>Looping the tube to reconnect to another tank</li>
+                <li>Extensions that increase the tube's reach</li>
+                <li>Levers that can only be pulled with the tube</li>
+              </ul>
+            </div>
+          </section>
+
           <section class="project-section" id="my-contributions">
             <h2 class="project-section__title">My Contributions</h2>
 
             <div class="contrib contrib--programming">
+              <p>As the only programmer on the team, I programmed all the systems and the entire gameplay.</p>
               <h3 class="contrib__title">Systems Programming</h3>
-              <p>Robiłem system generatywny statków i AI</p>
+              <h4>Rope</h4>
+              <p>The game's main and most important system is the oxygen tube/rope system. It was inspired and implemented based on what was presented in the video <a href="https://www.youtube.com/watch?v=qlfh_rv6khY">"A simple procedural animation technique"</a>. It works by dividing the rope into many smaller pieces, whose position is updated based on neighboring points and the player's position and movement. To ensure the rope is in the correct position, interacts with walls, and limits the character's movement, when it exceeds a designated range, the rope is repeatedly pulled back to the starting point and back to the character until it is fully taut and shortened to the required distance.</p>
+              <h4>Making a loop</h4>
+              <p>An additional mechanism for using the rope, which appears in later levels, is surrounding other oxygen tanks to reconnect your own pipe and thus gain a different range of movement. To achieve this mechanism, connections between successive rope segments are checked and two connections that intersect are searched for. Once an intersection is found, the distance between the two intersecting segments is calculated, yielding the length of the loop itself. Additionally, the average position of the segments within the loop is calculated, yielding the center of the loop and allowing us to determine which object is located there to decide what action the game should perform.</p>
             </div>
 
             <div class="contrib contrib--programming">
               <h3 class="contrib__title">Gameplay Programming</h3>
-              <p>Robiłem gameplay</p>
+              <div class="feature-columns">
+                <ul class="feature-list">
+                  <li>Movement</li>
+                  <li>Rope interactions</li>
+                  <li>Pulling the rope</li>
+                </ul>
+
+                <ul class="feature-list">
+                  <li>Particles</li>
+                  <li>Graphics implementation</li>
+                  <li>Sound implementation</li>
+                </ul>
+              </div>
             </div>
 
             <div class="contrib contrib--design">
               <h3 class="contrib__title">Game Design</h3>
-              <p>Robiłem design</p>
+              <p>As the sole designer on the team, I was responsible for coming up with the concept, preparing guidelines for the graphic designer, and resolving issues during production.</p>
+              <p>The goal was to create a game reminiscent of the browser games of the late 2010s. I wanted to create a game that would evoke those games not only in visual style but also in theme and gameplay. Because of this, and due to the constraints of the game jam, the game is short and quickly introduces and utilizes its mechanics. The rope mechanic is used not only to provide unique gameplay but also to utilize the medium's characteristic elements to convey the game's concept. The rope not only represents the limitation of the disease by limiting the hero's range of movement, but also serves as a tool allowing him to push forward, a tool with which he will ultimately recover.</p>
             </div>
 
             <div class="contrib contrib--design">
               <h3 class="contrib__title">Level Design</h3>
-              <p>Robiłem design</p>
+              <p>The game consists of 8 levels. Almost each one introduces and teaches some new mechanics or combines existing ones.</p>
+              <p>The first two maps teach movement and the principle of rope mechanic. Notes on the walls inform the player about the controls, and the first level layout shows that something is pulling behind the player character, and then in the second one this "something" can wrap around the walls and restrict movement. The second level is specifically designed to make the player intuitively follow a path where the pipe is too short and they have to go back, thus learning that the pipe is a limitation.</p>
+              <div class="project-gallery project-gallery--2">
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <img src="level1.png" alt="Level 1" />
+                    <span class="project-hero-media__caption">Level 1.</span>
+                  </div>
+                </div>
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <img src="level2.png" alt="Level 2" />
+                    <span class="project-hero-media__caption">Level 2.</span>
+                  </div>
+                </div>
+              </div>
+              <p>The next two maps introduce two more key mechanics, this time resulting from interaction with the environment. Firstly, the extension element that increases the reach of the pipe, and secondly, levers that can only be pulled by the pipe and move the movable walls, opening new passages.</p>
+              <div class="project-gallery project-gallery--2">
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <img src="level3.png" alt="Level 3" />
+                    <span class="project-hero-media__caption">Level 3.</span>
+                  </div>
+                </div>
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <img src="level4.png" alt="Level 4" />
+                    <span class="project-hero-media__caption">Level 4.</span>
+                  </div>
+                </div>
+              </div>
+              <p>Level five is the map I debated the most about whether to remove or keep. This map is a trap containing three extensions, and if the player moves carelessly, they push levers, closing the passages, making them impossible to open. This map is a stark contrast to modern design, and I usually try to avoid frustrating the player when designing. At the same time, this approach to level design is very reminiscent of the browser games I was inspired by. Considering that you can only fall for this trick once, the maps are short, and you can reset the level at any time, I decided to keep it.</p>
+              <p>Level six introduces another mechanic: connecting a pipe to another oxygen tank.</p>
+              <div class="project-gallery project-gallery--2">
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <img src="level5.png" alt="Level 5" />
+                    <span class="project-hero-media__caption">Level 5.</span>
+                  </div>
+                </div>
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <img src="level6.png" alt="Level 6" />
+                    <span class="project-hero-media__caption">Level 6.</span>
+                  </div>
+                </div>
+              </div>
+              <p>The seventh map combines lever and pipe reconnecting mechanics, and the last one is a bonus level with a ball mechanic that is not used for any puzzles, which is a kind of reward for the player.</p>
+              <div class="project-gallery project-gallery--2">
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <img src="level7.png" alt="Level 7" />
+                    <span class="project-hero-media__caption">Level 7.</span>
+                  </div>
+                </div>
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <img src="level8.png" alt="Level 8" />
+                    <span class="project-hero-media__caption">Level 8.</span>
+                  </div>
+                </div>
+              </div>
+              <p>All levels can barely be called a puzzle because they introduce and teach mechanics, and the combinations and possibilities of mechanisms are quickly exhausted with such a design. During the game jam, however, this was absolutely no problem. The game was the perfect length and the difficulty level was balanced enough that players believed they were solving puzzles even though they were actually following a designated tutorial scenario. The most important thing is that they left the game satisfied.</p>
+            </div>
+
+            <div class="contrib contrib--design">
+              <h3 class="contrib__title">Sound Design</h3>
+              <p>I created music and sound effects for the game to further enhance the gameplay atmosphere and the references to browser games. Quiet, slightly unsettling music plays in the background, the protagonist breathes occasionally, and other accompanying sounds include dragging a pipe along the ground, collecting an pipe extension, and earning a heart at the end of the level.</p>
+              <div class="media-with-text">
+                <audio class="audio-player" controls>
+                  <source src="hostipal.wav" type="audio/mpeg" />
+                </audio>
+                <div class="media-with-text__content">
+                  <p>The song that plays in the background.</p>
+                </div>
+              </div>
+
+              <div class="project-gallery project-gallery--1">
+                <div class="project-hero-media bounce-target">
+                  <div class="shake-target">
+                    <video controls>
+                      <source src="sound.mp4" type="video/mp4" />
+                    </video>
+                    <span class="project-hero-media__caption">Examples of sound design.</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <p class="contributions-also contributions-also--design">
@@ -113,6 +235,7 @@
               I also contributed to:
               <span class="card__tag card__tag--game-design">Game Design</span>
               <span class="card__tag card__tag--level-design">Level Design</span>
+              <span class="card__tag card__tag--sound-design">Sound Design</span>
               — to learn more
               <span class="contributions-also__switch" onclick="document.getElementById('modeToggle').click()">switch to Design</span>
             </p>
@@ -127,7 +250,7 @@
                   <td>Design & Programming & Sound Design</td>
                 </tr>
                 <tr>
-                  <td><a href="" target="_blank" rel="noopener">Paulina Zabiegły</a></td>
+                  <td>Paulina Zabiegły</td>
                   <td>2D Art</td>
                 </tr>
               </tbody>
