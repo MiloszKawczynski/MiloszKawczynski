@@ -287,20 +287,6 @@
   transition: color 0.4s ease;
 }
 
-.info-status {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 2px 8px;
-  border-radius: 3px;
-}
-
-.info-status--released      { background: #1a3a22; color: #7ecf8e; }
-.info-status--in-production { background: #1a2a4a; color: #90b0e0; }
-.info-status--abandoned     { background: #3a1a10; color: #e0906a; }
-
 .contributions-also {
   margin-top: 1.5rem;
   padding-top: 1rem;
@@ -750,7 +736,7 @@ body.mode--programming .doc-section li {
 .doc-section::-webkit-scrollbar-thumb:hover {
     background: var(--c-text-muted);
 }
-/* Scrollbar dla trybu programming */
+
 body.mode--programming .doc-section::-webkit-scrollbar-track {
     background: #16162a;
 }

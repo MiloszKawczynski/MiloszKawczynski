@@ -49,14 +49,6 @@ body.mode--programming .about-variant--programming {
   display: block;
 }
 
-.about-eyebrow {
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--c-accent);
-  margin-bottom: 0.5rem;
-}
-
 .about-name {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 4vw, 4rem);
@@ -115,6 +107,8 @@ body.mode--programming .about-bio p { color: #c0c0d8; }
 }
 
 .about-eyebrow {
+
+  text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -49,25 +49,25 @@ const artworks = [
   },
   {
     src: "./TheLittleFight.gif",
-    alt: "The Little Ones - Little Fight",
-    title: "The Little Ones - Little Fight",
+    alt: "The Little Ones – Little Fight",
+    title: "The Little Ones – Little Fight",
     date: "2022",
     description: "The work was created as a mockup of a GameBoy Advance-style game. It was followed up by a [simple game](https://gamejolt.com/games/TheLittleOnes/745037) using this animation as a cutscene and part of it as assets.\n\n240 x 160\n100 frames\n10 fps",
     size: 2
   },
   {
     src: "./TheLittleOnesVsDog.gif",
-    alt: "The Little Ones - Vs Dog",
-    title: "The Little Ones - Vs Dog",
+    alt: "The Little Ones – Vs Dog",
+    title: "The Little Ones – Vs Dog",
     date: "2025",
     description: "The work was created as a challenge to create pixel art with a convergence perspective.\n\n240 x 160\n28 frames\n10 fps",
     size: 4
   },
   {
     src: "./TheLittleOnesCharacters.gif",
-    alt: "The Little Ones - Characters",
-    title: "The Little Ones - Characters",
-    date: "2022 - ...",
+    alt: "The Little Ones – Characters",
+    title: "The Little Ones – Characters",
+    date: "2022 – …",
     description: "This work was created as a learning experience in character design and animation. New characters and scenes are added regularly.\n\n599 x 413\n24 frames\n10 fps",
     size: 4
   },

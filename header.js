@@ -57,7 +57,6 @@
     const btn = document.getElementById('ragdollToggle');
     if (!btn) return;
 
-    // Hide button on screens too small for ragdoll
     if (window.innerWidth < 1920 || window.innerHeight < 1080) 
     {
       btn.style.display = 'none';
