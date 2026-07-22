@@ -26,7 +26,13 @@
 
   document.body.insertAdjacentHTML('afterbegin', html);
 
-  const savedMode = localStorage.getItem('portfolio-mode') ?? 'design';
+  const params = new URLSearchParams(window.location.search);
+  const modeFromUrl = params.get('mode');
+
+  const savedMode = (modeFromUrl === 'design' || modeFromUrl === 'programming')
+    ? modeFromUrl
+    : (localStorage.getItem('portfolio-mode') ?? 'design');
+
   document.body.classList.toggle('mode--programming', savedMode === 'programming');
 
   function initToggle() 
