@@ -33,6 +33,11 @@
     ? modeFromUrl
     : (localStorage.getItem('portfolio-mode') ?? 'design');
 
+  if (modeFromUrl === 'design' || modeFromUrl === 'programming') 
+  {
+    localStorage.setItem('portfolio-mode', modeFromUrl);
+  }
+
   document.body.classList.toggle('mode--programming', savedMode === 'programming');
 
   function initToggle() 
