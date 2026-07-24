@@ -31,11 +31,11 @@
 
   const savedMode = (modeFromUrl === 'design' || modeFromUrl === 'programming')
     ? modeFromUrl
-    : (localStorage.getItem('portfolio-mode') ?? 'design');
+    : (sessionStorage.getItem('portfolio-mode') ?? 'design');
 
   if (modeFromUrl === 'design' || modeFromUrl === 'programming') 
   {
-    localStorage.setItem('portfolio-mode', modeFromUrl);
+    sessionStorage.setItem('portfolio-mode', modeFromUrl);
   }
 
   document.body.classList.toggle('mode--programming', savedMode === 'programming');
@@ -52,7 +52,7 @@
       const next = document.body.classList.contains('mode--programming') ? 'design' : 'programming';
       document.body.classList.toggle('mode--programming', next === 'programming');
       toggle.setAttribute('aria-checked', String(next === 'programming'));
-      localStorage.setItem('portfolio-mode', next);
+      sessionStorage.setItem('portfolio-mode', next);
       document.dispatchEvent(new CustomEvent('modechange', { detail: { mode: next } }));
     });
 
