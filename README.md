@@ -66,7 +66,7 @@ As project leader, I programmed most of the systems, the core gameplay, and many
 - 🥈 UniŁódzki Jam 2026 — 2nd Place Overall
 As project leader, I programmed all systems and gameplay, including a physics-based rope system, and shaped the concept, guided the graphic designer, and resolved production issues.
 
-### [Shortness Of Breath – Designer, Programming, Sound Design](https://miloszkawczynski.github.io/MiloszKawczynski/projects/docinoMitty/docinoMitty.html?mode=programming)
+### [Docino Mitty – Designer, Programming, Sound Design](https://miloszkawczynski.github.io/MiloszKawczynski/projects/docinoMitty/docinoMitty.html?mode=programming)
 - 🥉 gm(48) Jam 48th 2026 — 3rd Place Overall
 I was responsible for core systems and gameplay, including the domino placement and validity check system, as well as the game's idea and GDD.
 
