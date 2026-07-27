@@ -1,6 +1,9 @@
 # 👋 Hi, I'm Miłosz
+
 💡 Game Designer · Level Designer · Pixel Artist
+
 💻 Gameplay Programmer · System Programmer · Engine Programmer
+
 📍 Łódź, Poland
 
 ---
@@ -82,6 +85,6 @@ I was responsible for core systems and gameplay, including the domino placement 
 
 ## Contact
 
-- ✉️ [Email](kawczynskimilosz@gmail.com)  
+- ✉️ [Email](mailto:kawczynskimilosz@gmail.com)  
 - 🔗 [LinkedIn](https://www.linkedin.com/in/miłosz-kawczyński-9a8ab134a/)
 - 🔗 [Portoflio](https://miloszkawczynski.github.io/MiloszKawczynski/index.html?mode=programming)  
