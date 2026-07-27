@@ -85,6 +85,6 @@ I was responsible for core systems and gameplay, including the domino placement 
 
 ## Contact
 
-- ✉️ [Email](mailto:kawczynskimilosz@gmail.com)  
+- ✉️ [kawczynskimilosz@gmail.com](mailto:kawczynskimilosz@gmail.com)  
 - 🔗 [LinkedIn](https://www.linkedin.com/in/miłosz-kawczyński-9a8ab134a/)
 - 🔗 [Portoflio](https://miloszkawczynski.github.io/MiloszKawczynski/index.html?mode=programming)  
