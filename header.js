@@ -1,6 +1,6 @@
 (function () 
 {
-  const BASE = '/miloszkawczynskidesign.github.io';
+  const BASE = '/MiloszKawczynski';
 
   const html = `
   <header class="header">
