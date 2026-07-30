@@ -1,7 +1,20 @@
 (function () {
+  const BASE = '/MiloszKawczynski';
+  
   const html = `
   <footer class="footer">
     <div class="container footer__inner">
+      <div class="footer__left-icons">
+        <a href="${BASE}/index.html" class="footer__left-link" aria-label="Projekty">
+          <i class="fa-solid fa-diagram-project"></i>
+        </a>
+        <a href="${BASE}/pixelart/pixelart.html" class="footer__left-link" aria-label="Pixelart">
+          <i class="fa-solid fa-palette"></i>
+        </a>
+        <a href="${BASE}/about.html" class="footer__left-link" aria-label="O mnie">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
       <span class="footer__name">Miłosz Kawczyński</span>
       <div class="footer__links">
         <a href="https://github.com/MiloszKawczynski" target="_blank" rel="noopener" class="footer__link">
