@@ -118,7 +118,14 @@ body.mode--programming .cv-variant--programming {
 .cv-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 1.35rem;
+  gap: 0.85rem;
+}
+
+/* Sidebar sections no longer stack their own margin-bottom on top of the
+   flex gap above — that double-spacing was the main cause of the big gaps
+   between skill blocks. */
+.cv-sidebar .cv-section {
+  margin-bottom: 0;
 }
 
 .cv-section { margin-bottom: 1.6rem; }
@@ -135,6 +142,11 @@ body.mode--programming .cv-variant--programming {
   padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--c-light);
   transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.cv-sidebar .cv-section__title {
+  margin-bottom: 0.55rem;
+  padding-bottom: 0.3rem;
 }
 
 .cv-content .cv-section__title {
@@ -169,14 +181,14 @@ body.mode--programming .cv-variant--programming {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 3px;
 }
 
 .cv-simple-list li {
   position: relative;
   padding-left: 15px;
   font-size: 0.85rem;
-  line-height: 1.5;
+  line-height: 1.4;
   font-weight: 300;
   color: var(--c-text);
   transition: color 0.4s ease;
@@ -285,10 +297,9 @@ body.mode--programming .cv-variant--programming {
 }
 
 .cv-section--education {
-  margin-top: 1.9rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--c-light);
-  transition: border-color 0.4s ease;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
 .cv-section--education > .cv-section__title {
@@ -296,10 +307,52 @@ body.mode--programming .cv-variant--programming {
   color: var(--c-accent);
 }
 
+/* Compact, list-style layout for education in the narrow sidebar column:
+   no timeline border, title/period stacked instead of side-by-side (so
+   long degree names don't force awkward wraps), thin divider between
+   entries instead of a left rule. */
 .cv-timeline--grid {
   display: flex;
   flex-direction: column;
-  gap: 1.15rem;
+  gap: 0.7rem;
+}
+
+.cv-timeline--grid .cv-entry {
+  border-left: none;
+  padding-left: 0;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px dashed var(--c-light);
+}
+
+.cv-timeline--grid .cv-entry:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.cv-timeline--grid .cv-entry__top {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  margin-bottom: 3px;
+}
+
+.cv-timeline--grid .cv-entry__title {
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.cv-timeline--grid .cv-entry__period {
+  font-size: 0.68rem;
+}
+
+.cv-timeline--grid .cv-entry__subtitle {
+  font-size: 0.76rem;
+  margin-bottom: 0.15rem;
+}
+
+.cv-timeline--grid .cv-entry__desc {
+  font-size: 0.74rem;
+  line-height: 1.4;
 }
 
 .cv-section--awards {
@@ -372,10 +425,46 @@ body.mode--programming .cv-page {
 
   .cv-layout { grid-template-columns: 210px 1fr; gap: 1.4rem; }
 
-  .cv-section, .cv-entry, .cv-badge, .cv-footer { break-inside: avoid; }
+  /* Only avoid breaking small, self-contained chunks. Large wrapper
+     sections (Work Experience, Awards, Additional Experience...) must be
+     allowed to split across pages — forcing the whole section to avoid a
+     break is what was pushing everything but the header onto page 2. */
+  .cv-entry, .cv-badge, .cv-footer { break-inside: avoid; }
+  .cv-sidebar .cv-section { break-inside: avoid; }
 
   a { color: inherit !important; text-decoration: none !important; border-bottom: none !important; }
 
+  /* Keep a section's heading glued to the content that follows it, and keep
+     the photo/name block from being split across a page boundary. */
+  .cv-section__title,
+  .cv-entry__top,
+  .cv-badge__name { break-after: avoid; page-break-after: avoid; }
+
+  .cv-header { break-inside: avoid; page-break-inside: avoid; }
+
+  p, li { orphans: 3; widows: 3; }
+
+  /* --- Opt-in print utilities: add these classes by hand only if the print
+     preview actually needs them (e.g. an award badge gets cut in half, or
+     Additional Experience leaves a big empty gap where the sidebar ended). --- */
+
+  /* Add to any .cv-badge / .cv-entry / .cv-section to force it to start on
+     a fresh page — e.g. on the badge right after "ZTGK 2024" so the
+     remaining awards move cleanly to page 2 instead of splitting mid-badge. */
+  .print-break-before {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* Add to a section that lives inside .cv-content (i.e. is still confined
+     to the narrow content column, like Additional Experience in the
+     programming variant) to make it span the full printed page width,
+     filling the space left by a shorter sidebar. Values match the print
+     .cv-layout column width (210px) + gap (1.4rem) above. */
+  .print-full-width {
+    margin-left: calc(-210px - 1.4rem);
+    width: calc(100% + 210px + 1.4rem);
+  }
 }
 
 @media screen and (max-width: 720px) {
